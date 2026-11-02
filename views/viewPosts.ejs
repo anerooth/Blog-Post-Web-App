@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs")%>
+
+    <h1>Here you can view posts</h1>
+    <%if(locals.curPosts){%>
+        <%for(const[key,value] of locals.curPosts){%>
+            <h3><%= key %> </h3>
+            <p><%= value %> </p>
+        <%}%>
+        <%}else{%>
+            <p>No Posts to View</p>
+        <%}%>
+
+<%- include("partials/footer.ejs")%>
